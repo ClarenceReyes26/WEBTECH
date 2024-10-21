@@ -1,0 +1,214 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure body takes full height of the screen */
+    display: flex;
+    flex-direction: column; /* Align content in a column */
+    position: relative; /* To position elements inside the body */
+}
+
+/* Header Styles */
+header {
+    background-color: #111;
+    padding: 10px 20px; /* Padding on the left and right */
+    display: flex;
+    justify-content: space-between; /* Space between left and right */
+    align-items: center; /* Center items vertically */
+}
+
+.main-nav {
+    display: flex;
+    width: 100%; /* Full width */
+    position: relative; /* Allows for absolute positioning of title */
+}
+
+.nav-left {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.nav-left ul {
+    list-style: none;
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    display: flex; /* Horizontal list */
+}
+
+.nav-left ul li {
+    margin-right: 15px; /* Space between links */
+}
+
+.nav-left ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px; /* Adjust size as needed */
+    color: #fff;
+    position: absolute; /* Position title in the center */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for true center */
+}
+
+.nav-right {
+    display: flex; /* Horizontal alignment */
+    align-items: center; /* Center items vertically */
+    margin-left: auto; /* Push to the right */
+}
+
+/* Ensure the country selector and icon bar are spaced out */
+.country-selector-header {
+    margin-right: 20px; /* Space between country selector and icon bar */
+}
+
+.icon-bar a {
+    color: #fff;
+    margin-left: 15px; /* Space to the left */
+    text-decoration: none; /* No underline */
+}
+
+.icon-bar a i {
+    font-size: 18px; /* Icon size */
+    color: #fff; /* Icon color */
+}
+
+/* Content Styles */
+.home-content, .music-content, .merch-content {
+    text-align: center;
+    flex: 1; /* Ensures that the content expands to take up available space */
+}
+
+/* Home Page Video */
+.home-video video {
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+
+/* Other existing styles remain unchanged */
+
+/* Music Page */
+.music-albums {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.music-albums .album {
+    width: 200px; /* Set a fixed width for the album cover */
+    margin: 10px; /* Space between album items */
+}
+
+.music-albums .album img {
+    width: 100%; /* Ensure the image takes the full width of the album container */
+    height: auto; /* Maintain aspect ratio */
+    border: 5px solid white; /* White outline */
+    border-radius: 10px; /* Optional: rounded corners for the outline */
+    background-color: #111; /* Optional: background color for contrast */
+}
+
+.album {
+    text-align: center; /* Center the content of each album */
+    margin-bottom: 20px;
+}
+
+
+
+/* Merch Page */
+.merch-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.merch-item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.merch-item img {
+    width: auto;
+    height: auto;
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin: auto;
+    object-fit: contain;
+}
+
+.merch-item button {
+    background-color: #555;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: not-allowed;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Bottom Text Styles */
+.bottom-text {
+    text-align: center; /* Center the text */
+    position: fixed; /* Keep it at the bottom */
+    bottom: 0; /* Position it at the bottom */
+    width: 100%; /* Full width */
+    background-color: #111; /* Same background as footer */
+    color: white; /* White text */
+    padding: 5px; /* Minimal padding */
+    font-size: 14px; /* Font size */
+    z-index: 100; /* Ensure it's above other content */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .home-video video {
+        max-width: 95%; /* Adjust to a slightly smaller size, e.g., 95% */
+        height: auto; /* Maintain aspect ratio */
+        margin: 20px auto; /* Center the video with some margin from the top and bottom */
+        display: block; /* Ensure it behaves as a block element */
+    }
+    
+    
+
+    .music-albums, .merch-items {
+        flex-direction: column;
+    }
+
+    .album, .merch-item {
+        margin-bottom: 20px;
+    }
+}
+
+.artist-profile {
+    text-align: center; /* Center align the profile content */
+    margin: 20px auto; /* Margin to separate from video and other content */
+    padding: 20px; /* Padding for the section */
+    max-width: 800px; /* Set a max width for the profile section */
+}
+
+.profile-picture {
+    width: 150px; /* Set the width for the profile picture */
+    height: 150px; /* Set the height for the profile picture */
+    border-radius: 50%; /* Make it circular */
+    overflow: hidden; /* Ensure the image stays within the circle */
+    margin: 0 auto; /* Center the picture */
+}
+
+.profile-picture img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+}
+.artist-profile p {
+    margin-bottom: 20px; /* Adjust the value for more or less space */
+}
+
